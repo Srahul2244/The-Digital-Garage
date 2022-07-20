@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management</title>
+ <style>
+    #create{
+        height:auto;
+        width:50%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding:4%;
+        margin: auto;
+        margin-top:-40px;
+        line-height: 1px;
+        
+    }
+    #create>h5{
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 25px 0 0 0;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    span{
+        color: #2b619e;
+    }
+            form {
+        margin: 0 auto;
+        margin-top:10px;
+        width: 70%;
+        padding: 5px;
+        }
+        label {
+        font-size: 20px;
+        color: rgb(131, 130, 130);
+        }
+            input[type="text"],
+            select,
+            textarea {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            border: none;
+            }
+            input[type="password"],
+            select,
+            textarea {
+            width: 100%;
+            padding:20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            resize: vertical;
+            border: none;
+            }
+            button {
+            background-color: rgb(121, 117, 117);
+            color: rgb(11, 11, 11);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+            opacity: 0.9;
+            }
+
+            button:hover {
+            opacity:1;
+            }
+
+        #si{
+            text-align: center;
+            color: black;
+        }
+        #h7{
+            height:170px;
+            width:100%;
+            background-color:white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        #h7>h2{
+            font-size: 40px;
+            line-height: 30px;
+            margin-left: 9%;
+            font-weight: 400;
+            color: rgb(60, 64, 67);
+            font-family: Google Sans", Arial, sans-serif;
+        }
+        h2+p{
+          
+           font-size:22px;
+           font-weight: 400;
+           margin-left: 9%;
+           color: rgb(179, 170, 170);
+         color: rgb(95, 99, 104);
+          font-family: Google Sans", Arial, sans-serif;
+
+        }
+        #p{
+            width:110%;
+            font-size: 20px;
+            line-height: 20px;
+            color: rgb(189, 184, 184);
+        }
+        #flex{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        /* for googlw */
+#go{
+    height:auto;
+    display:flex;
+    justify-content:space-evenly;
+    width:40%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#go>div>img{
+    width:80%;
+  padding-top: 10px ;
+ 
+}
+h5{
+    font-size: 16px;
+    color:rgb(179, 174, 174)
+}
+/* h4/ */
+h1{
+    font-size: 40px;
+    color: rgb(182, 182, 182);
+}
+h3{
+    font-size:25px;
+}
+
+
+ </style>
+</head>
+
+<body>
+  
+    <div id="h7">
+        <h2>Create your account</h2>
+        <p>Sign up to access Google Digital Garage free online courses</p>
+    </div>
+  <div id="create">
+   <div id="go">
+    <div><img src="https://learndigital.withgoogle.com/static/digital-workshop/assets/icons/google-button-g.png"/></div>
+    <div><h5 id="h5">Register with google</h5></div>
+   </div>
+     <h4>orContinue with Email</h4>
+     <form>
+        <input  id="email" type="text" placeholder="Enter  email" /><br />
+        <hr>
+        <input  id="pass"type="password" placeholder="Enter  password" minlength="8" />
+        <hr>
+       <p id="p">Choose a password & Use 6 or more characters with a mix of letters, numbers & symbols</p><br>
+        <h3>Already have account?<a style="text-decoration: none;"href="sign.html"><span>SIGN IN</span></a></h3>
+      <div><button type="submit" class="signupbtn">Register</button></div>
+    </form>
+</div>
+   </body>
+
+</html>
+<script>
+   
+    document.querySelector("form").addEventListener("submit",sigFun)
+    let arr=JSON.parse(localStorage.getItem("signin"))||[];
+    function sigFun(event){
+        event.preventDefault();
+       let email=document.getElementById("email").value;
+       let pass =document.getElementById("pass").value;
+      
+        let obj={
+            email:email,
+            pass:pass,
+        }
+    arr.push(obj)
+    console.log(arr)
+    localStorage.setItem("signin",JSON.stringify(arr))
+    window.location.href="sign.html"
+          
+    }
+</script>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #container{
+            width:100%;
+            height: 590px;
+            border: 1px solid red;
+        } */
+        body{
+            font-family:  "Google Sans", Arial, sans-serif;
+        }
+        #nav {
+            display: flex;
+            float: left;
+            justify-content: space-between;
+            width: 97%;
+            padding: 20px;
+            color: #FFFFFF;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            background-color: #FFFFFF;
+            position: fixed;
+            top: 0;
+            /* position:sticky; */
+        }
+       
+        
+
+        #nav1 {
+            width: 52%;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+
+        }
+
+        #nav2 {
+            width: 40%;
+            text-align: end;
+        }
+
+        #a {
+            margin: 30px;
+            margin-left: 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        img {
+            width: 220px;
+        }
+
+        .dropbtn {
+            background-color: #FFFFFF;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .a1 {
+            text-decoration: none;
+        }
+
+        .a1:hover {
+            background-color: black;
+            color: #FFFFFF;
+        }
+
+        #btn:hover {
+            background-color: black;
+            color: #FFFFFF;
+        }
+        /* des part */
+
+        #des  {
+            width:80%;
+            display: flex;
+            justify-content: space around;
+            /* border: 1px solid rgb(26, 25, 25); */
+            gap:20px;
+            margin: auto;
+          padding: 20px;
+        }
+
+        #des>div {
+            width:40%;
+            height:auto;
+            /* border: 1px solid red; */
+            margin: auto;
+        }
+
+        .learn{
+            font-family: "Google Sans", Arial, sans-serif;
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 56px;
+          color:  rgb(60, 64, 67);
+        }
+        .img-fix{
+            width: 405px;
+        }
+        .learn1{
+        font-family: "Roboto, Arial, Helvetica, serif";
+        Font-size: 18px;
+        font-weight: 300;
+        line-height:30px;
+        color: rgb(66, 66, 66);
+        }
+        .button{
+            font-size: 16px;
+           font-weight: 500;
+           line-height: 20px;
+           color: rgb(255, 255, 255);
+           background-color: #174EA6;
+           border: none;
+           padding: 13px;
+           border-radius: 3px;
+        }
+        .img-fix2{
+            width: 90px;
+        }
+        .img-fix3{
+          height:80px;
+        }
+        span{
+            padding: 20px;
+            margin-left: 18px;
+        }
+        .we1{
+           font-size: 14px;
+           font-weight:300 ;
+           line-height: 26px;
+           color:rgb(66, 66, 66);
+           margin-left: 40px;
+        }
+        #mid{
+         
+          width: 80%;
+          margin: auto;
+          margin-top: 50px;
+        }
+        /* zoom */
+        #zoom{
+           /* border: 1px solid red ; */
+            width: 100%;
+            margin: auto;
+            display: flex;
+            margin-top: 40px;
+           background-color: #1A73E8;
+        }
+        .img-fix4{
+            width:100px;
+           background-color:#FFFFFF;
+           padding: 10px;
+           border-radius:50%;
+          
+           
+        }
+        #im{
+            width:10%;
+            padding: 30px;
+        }
+        .did{
+            font-size:32px;
+            font-weight:300;
+            line-height: 40px;
+            color: rgb(255, 255, 255) ;
+        }
+        .online{
+        font-style:Roboto, Arial, Helvetica, serif; 
+       font-size:16px;
+       font-weight: 300;
+       line-height: 26px;
+       color:rgb(255, 255, 255);
+        }
+        .explore{
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 22px;
+         color: rgb(255, 255, 255) ;
+        }
+        .h2{
+            width:20%;
+            padding: 10px;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* description part */
+        #sp{
+            width: 65%;
+            margin: auto;
+            padding:20px;
+            /* border: 1px solid red; */
+        }
+        .do{
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 40px;
+            color:  rgb(60, 64, 67);
+            text-align: center;
+        }
+        .discover{
+            font-size:18px;
+            text-align: center;
+            font-weight: 300;
+            line-height: 32px;
+            color:rgb(66, 66, 66);
+        }
+     /* bottom part */
+     #container{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:auto;
+        gap: 40px;
+        width: 70%;
+        margin: auto;
+       
+     }
+     #container>div{
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        
+     }
+     .cont{
+        width:30%;
+        padding: 10px;
+     }
+    .dig{
+        font-size:18px;
+        font-weight:500;
+        line-height:28px;
+        color:rgb(60, 64, 67) ;
+        margin-left:20px;
+   }
+   .demand{
+    font-size:16px;
+    font-weight: 300;
+    line-height: 23px;
+    color: rgb(66, 66, 66);
+    margin-left:20px;
+   }
+   #since{
+    display: flex;
+    width: 80%;
+    margin-top: 30px;
+    margin: auto;
+    padding: 40px;
+    /* border: 1px solid rgb(24, 24, 24); */
+   }
+   #since>div{
+    /* border: 1px solid red; */
+    width:45%;
+    
+   }
+   .img-fix6{
+    text-align: center;
+    margin-left: 90px;
+   }
+   .since{
+    font-size: 16px;;
+  font-weight:300;
+  line-height: 24px;
+  color: rgb(32, 33, 36);
+  background-color: #F8F9FA;
+
+   }
+   .explore1{
+    border: 1px solid blue;
+    height: 40px;
+    width: 100px;
+    color: #174EA6;
+   }
+   .explore1:hover{
+    background-color: #174EA6;
+    color: white;
+   }
+   #src{
+    display: flex;
+    width: 80%;
+    margin: auto;
+   }
+   /* #src>div{
+
+   } */
+   #flex9{
+    display:flex;
+    width:45%;
+  
+   }
+   #src-img{
+    width: 45%;
+    margin-left: 70px;
+    margin-top: 20px;
+   }
+   #privacy{
+  font-size: 13px;
+  line-height:16px;
+  color:rgba(0, 0, 0, 0.54);
+   }
+   #pri{
+   font-size: 16px;
+   line-height: normal;
+   font-weight: 400;
+    color: rgba(171, 168, 168, 0.87)
+
+ }
+ .i{
+    width: 100%;
+    border: 1px solid rgb(165, 164, 164);
+ }
+ .img-fix10{
+    width:80%;
+    margin-left: 70%;
+ }
+#flex7{
+    display: flex;
+    float:right;
+}
+.share{
+    margin-left:50%;
+}
+
+    </style>
+</head>
+
+<div id="nav">
+    <div id="nav1">
+        <a id="a1" href="index.html"><img
+                src="https://lh3.googleusercontent.com/kvtXWUZ756KishzmjWDgAf0AW77QeBSuLbUXDQidstlS2h63BSRrlgm4bU97NPjdF5skHZFKQufqTqGt1UbTO8VV0OB7SqXAz7qCng=-rw"</a>
+            <a class="a1" href="">Online Courses</a>
+            <a class="a1" href="">Certification</a>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <a class="a2" href="">Live Training</a>
+                    <a class="a2" href="">Remote Working</a>
+                    <a class="a2" href="">Tools and Rescourses</a>
+                    <a class="a2" href="">Help& FAQs</a>
+                    <a class="a2" href="">Feedback</a>
+                </div>
+            </div>
+
+    </div>
+    <div id="nav2">
+        <a href="sign.html" id="a">Sign in</a>
+        <button id="btn">Register</button>
+    </div>
+</div>
+</div>
+</div>
+
+<div id="des">
+    <div>
+        <div>
+            <h1 class="learn">Learn the skills of the future</h1>
+            <p class="learn1">Accelerate your career or business with an online digital skills course in everything from marketing to coding and beyond.</p>
+            <button class="button">Find your courses</button>
+        </div>
+        
+  </div>
+    <div>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/decc8829791505.5603d3eb401c2.jpg" class="img-fix">
+    </div>
+</div>
+<div id ="mid">
+    <p class="we1">We provide courses along with leading institutions and companies</p>
+    <span><img src="https://lh3.googleusercontent.com/jJZnt3_ZEgqPLoDXv9OMtmvHQ13ExWDcg4TeOruamOAm1MLaLGmzj1qwz4VBveo0Q_LCph1Idy558gyl5KHp5HDEbTxRdkzD5sGjDOjBhte3eqvw8A=w160" class="img-fix2"></span>
+    <span><img src="https://lh3.googleusercontent.com/Q3wBjzp1-TGEZWpdp-E6PSkc-nMEV66Jaokd4gUjyGh95KMqQyR1I7Gu1eSU7qifjLuiwVJrEmB92HPTa4Hr3e6Mh7JGk7zrQ8YmZ-1HQCWZpKHpzTU=w160" class="img-fix2"class="img-fix3"></span>
+    <span><img src="https://lh3.googleusercontent.com/MVTsJCD1WJjExvucPvW4GWYHnJ6YLPgQEFijPCVpSyfIM1wAgVvW-AQghsLFZLoWgnBCYbqI3wOveQ1RdOeDf_2Sgo03A7zN8Pwd6NSsu_wBuITKdiE=w160" class="img-fix2"class="img-fix3"></span>
+    <span><img src="https://lh3.googleusercontent.com/oDBNKrOW0hYPsQgbz7v2BAUCjUoPfuyBBaqUFGg-oify2xKieu2OjW_6C_6smen-YNlOf_CR8M3-VN5pOy_3r4VQ1FPdOUk8mrO58abJNS0RwN9_YYY=w160" class="img-fix2"></span>
+    <span><img src="https://lh3.googleusercontent.com/KZYTEfg4wkORJscNEaj27bVFV83vzRB_6Kd7Fwpqnd5KipwGdqkkulHt9KPWr8oPQnHsh2zyw1tpPyKbB_HfzrG6XTeoy91EONnq9fRj6dV9p4HL_TA=w160" class="img-fix2"></span>
+</div>
+<div id="zoom">
+<div id="im"><img src="https://lh3.googleusercontent.com/N9jW0_MdICcLbzV1L-JcfAXr5QaadNKtc8HgH-KPixv3J9XaSnjLkru3dZl0dfNYR12hEsDkQM_WMXtXqe_ohTSx96E7gmFHwzpXPubIJlfV3ybeTxks=-rw"class="img-fix4"></div>
+<div>
+    <h1 class="did">Did you know we also have webinars?</h1>
+    <p class="online">Online sessions designed to help you develop skills in less than an hour. You can watch webinars live or register to take part in what is coming up.</p>
+</div>
+<div class="h2"><h2 class="explore">Explore our webinars-></h2></div>
+</div>
+<div id="sp">
+    <h1 class="do">Do things you never thought possible</h1>
+    <p class="discover">Discover courses in topics designed to help expand your career, business and horizons and to upgrade your skills for a new digital world.</p>
+</div>
+<div id="container">
+   <div>
+    <img src="https://lh3.googleusercontent.com/-0GVWZi0ZL7pLYB8XEJRfDrSC2dI6gT8RvubBrpw2BrIxtHkZY--Jn5FxXC4gp0s0fTJa4aV59o1F29qXNv_HBxcwW7zyyiDSMegNwBOEcgS_KU27Fiw=w64"class="cont">
+    <h1 class="dig">Digital Marketing</h1>
+    <p class="demand">Get certified free of charge in our "fundamental of digital marketing"course,or explore other content to help to get your bussiness online.</p>
+    
+</div>
+   <div>
+    <img src="https://lh3.googleusercontent.com/yUtRjWMWqcVM2Z0MWD3KX1GCkqO585TTOGlDeu3yOLIqv4Zd_Ywa6Fh-YurdcjqfYS0nZrUGBI8V-24saZac4YOri5yuoApFaxJwJZ2IzWEDaWYMfA=w64"class="cont">
+    <h1 class="dig">Career Development</h1>
+    <p class="demand">Gain the skills you need to enhance your career or gain a new job</p>
+    
+</div>
+   <div>
+    <img src="https://lh3.googleusercontent.com/XyURkvWIqHkfiP5yHRbJOHjUYNfEbVfqP_WoHllMs8n0su4vWyB9iwGca_UaqNRfIRLcPw-smh6Ra5XWl3R9Td-PhQcrK6KwsNiF8w8i2bIz0JcHLeP-=w64"class="cont">
+    <h1 class="dig">Data</h1>
+    <p class="demand">Demand for workers with specialist data skills has more than tripled over the last five years.</p>
+</div>
+</div>
+<div id ="since">
+    <div>
+        <img src="https://lh3.googleusercontent.com/DxI7wff6hMCJz5NdnBMDjV8KJlLJOhUShC4cg5ZAGUWvS-wWwqzkuM5VKeFNLZQhxR7wW_WL5RY71ShVN1-FVmofpRoXZppnuud5H0JBeLASVYFO2Fi3=w680-rw" class="img-fix6">
+    </div>
+    <div>
+        <p class="since">Since 2015, we've trained over 700,000 people, to help them find a job, grow their career or business. Across Britain, local businesses, communities and people are using Google tools and training to thrive. Discover how Google is helping the UK economy to grow. </p>
+        <button class="explore1">Explore Now</button>
+    </div>
+</div>
+<div id="src">
+    <div id="src-img"><img src="https://lh3.googleusercontent.com/7NabP8N3VdnHYt17iVcUvF_Hr2lFg-ayg1YnYIrvtWCtt-RtrnwVUzLZRUT3DSg3IkZHGqEte1v-_E590aB_AC0uCA-xthGO0d1YAA=-rw"></div>
+    <div id="flex9">
+      <span id="privacy">privacy and services</span>
+      <span id="pri">
+        <select>
+            <option>romania</option>
+            <option>newyork</option>
+            <option>europe</option>
+            <option>turkey</option>
+            <option>United kingdom</option>
+            <option>portugal</option>
+            <option>netherland</option>
+            <option>malta</option>
+            <option>meena</option>
+        </select>
+      </span>
+    </div>
+</div>
+<hr class="i">
+<div>
+        <div id="flex7">
+          
+            <span><img src="https://lh3.googleusercontent.com/sw4rOkreSopt2DcXlOCH9HPwHm7pPgeBsO8DFqWnnVPifC4473ztUcLCT49kDnDj5c-ClaRCOQKmBvbrzqICFq7yNgcqq8-byBV0aw=-rw"class="img-fix10"></span>
+             <span><img src="https://lh3.googleusercontent.com/O73TcAUC463DfCnA87ap5gw7uWPW2R6owA8p-jcmHYJuysd2BVT_W-1PzUdxk_kbzjQ-OHuTt4W1i3N4hi_KtCkBifUtpZFPlz4R=-rw"class=img-fix10></span>
+             <span><img src="https://lh3.googleusercontent.com/2PFoqNpZ5xu9JK1u_CRR0aiYqGb0K6cOKkzmS2Ux0rucddJgNeMwsniGFMzQWopCdNK9rBzq73N0188sAtK_UFpgUHPPgz2XyDG5=-rw"class=img-fix10></span>
+    </div>
+   </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("#btn").addEventListener("click", fun)
+    function fun(event) {
+        event.preventDefault()
+        window.location.href = "register.html"
+    }
+    document.getElementById("explore").addEventListener("click",func)
+    function func(event){
+        event.preventDefault()
+        window.location.href="";
+    }
+    document.getElementsByClassName("button").addEventListener("click",fu)
+    function fu(event){
+        event.preventDefault()
+        window.location.href="";
+    }
+   
+</script>
