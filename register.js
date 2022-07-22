@@ -13,5 +13,4 @@ document.querySelector("form").addEventListener("submit",sigFun)
     console.log(arr)
     localStorage.setItem("signin",JSON.stringify(arr))
     window.location.href="sign.html"
-          
-    }
+          }

@@ -40,7 +40,7 @@
         <div>
             <h1 class="learn">Learn the skills of the future</h1>
             <p class="learn1">Accelerate your career or business with an online digital skills course in everything from marketing to coding and beyond.</p>
-            <button class="button">Find your courses</button>
+            <button class="button"onclick="myfun()">Find your courses</button>
         </div>
         
   </div>
@@ -62,7 +62,7 @@
     <h1 class="did">Did you know we also have webinars?</h1>
     <p class="online">Online sessions designed to help you develop skills in less than an hour. You can watch webinars live or register to take part in what is coming up.</p>
 </div>
-<div class="h2"><h2 class="explore">Explore our webinars-></h2></div>
+<div class="h2"><h2 class="explore"onclick="funAbh()">Explore our webinars-></h2></div>
 </div>
 <div id="sp">
     <h1 class="do">Do things you never thought possible</h1>
@@ -93,7 +93,7 @@
     </div>
     <div>
         <p class="since">Since 2015, we've trained over 700,000 people, to help them find a job, grow their career or business. Across Britain, local businesses, communities and people are using Google tools and training to thrive. Discover how Google is helping the UK economy to grow. </p>
-        <button class="explore1">Explore Now</button>
+        <button class="explore1"onclick="funMy()">Explore Now</button>
     </div>
 </div>
 <div id="src">
@@ -130,23 +130,24 @@
 <script>
     document.querySelector("#btn").addEventListener("click", fun)
     function fun(event) {
-        event.preventDefault()
         window.location.href = "register.html"
     }
     document.getElementById("explore").addEventListener("click",func)
-    function func(event){
-        event.preventDefault()
-        window.location.href="";
+    function funMy(event){
+       
+        window.location.href="live.html";
     }
     document.getElementsByClassName(".button").addEventListener("click",fu)
-    function fu(event){
-        event.preventDefault()
+    function myfun(event){
         window.location.href="online.html";
     } 
-     document.getElementById("explore1").addEventListener("click",func)
-    function func(event){
-        event.preventDefault()
+     document.getElementsByClassName("explore1").addEventListener("click",func)
+    function myfun(event){
         window.location.href="live.html";
+    }
+    document.getElementsByClassName("explore").addEventListener("click",func)
+    function funAbh(event){
+        window.location.href="online.html";
     }
    
 </script>
