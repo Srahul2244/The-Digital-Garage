@@ -87,6 +87,54 @@ img {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+.menu-btn{
+    color:white;
+    display:none;
+}
+#toggle{
+            display: none;
+        }
+        .togglearea{
+            background-color:#f1f1f1;
+            border-bottom:2px solid white;
+            color:white;
+            display:flex;
+            justify-content:start;
+        }
+        .togglearea label{
+            background-color: white;
+            height: 30px;
+            width: 40px;
+            border-radius:6px;
+            cursor:pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .togglearea label .i{
+            background-color: rgb(212, 204, 204);
+            height: 1px;
+            width: 40%;
+            margin:1px 0;
+        }
+        .togglearea{
+            display:none;
+        }
+        .br{
+            text-decoration: none;
+        }
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 .a1 {
     text-decoration: none;
@@ -101,7 +149,7 @@ img {
     background-color:#174EA6;
     color: #FFFFFF;
 }
-
+ 
 
 #des  {
     width:80%;
@@ -163,10 +211,10 @@ color: rgb(66, 66, 66);
 .img-fix3{
   height:80px;
 }
-span{
+/* span{
     padding: 20px;
     margin-left: 18px;
-}
+} */
 .we1{
    font-size: 14px;
    font-weight:300 ;
@@ -357,12 +405,13 @@ float:right;
 .share{
 margin-left:50%;
 }
-@media all and (min-width:768px) and (max-width:1024px){
+
+@media all and (min-width:756px) and (max-width:1024px){
 #des{
 width: 100%;
 margin: 0;
 padding: 0;
-margin-top: 30px;
+margin-top: 50px;
 }
 .learn{
 font-size: 35px;
@@ -471,6 +520,7 @@ width: 100%;;
     background-color: #FFFFFF;
     position: relative;
     top: 0;
+    height: 20px;
     
  
 }
@@ -498,15 +548,17 @@ width: 100%;;
     font-size: 20px;
     padding: 10px;
 }
-
+ 
 }
-@media all and (min-width:320px) and (max-width:767px) {
-#des{
+@media all and (min-width:320px) and (max-width:755px) {
+
+    #des{
 flex-direction: column;
 width: 100%;
-margin-top: 40px;
+margin-top:10px;
 
 }
+
 #des>div{
 width: 100%;
 margin-top: 20px;
@@ -647,5 +699,28 @@ width:100%;
 .img5{
     width: 150px;
 }
+#nav{
+    flex-direction: column;
+    width:30%;
+    display: none; 
+  }
+  #nav1{
+      flex-direction: column;
+   }
+   #a{
+     display:none;
+   }
+   #btn{
+      display: block;
+   }
 
+  #toggle:checked+#nav{
+      display:flex;
+  }
+.togglearea{
+  display: flex;
+}
+.sr{
+  display: inline;
+}
 }
