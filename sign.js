@@ -18,3 +18,6 @@ function sigFu(event){
         }
     })
 }
+function funct(){
+    window.location.href="register.html"
+}
