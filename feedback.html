@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        #main{
+            display: flex;
+            background-color: rgb(84, 110, 122);
+            justify-content: space-between;
+        }
+        div>div{
+            display: flex;
+            gap:30px;
+            color: aliceblue;
+        }
+        #fr{
+            color: aliceblue;
+            margin-top: 17px;
+            margin-left: 10px;
+        }
+        #fr1{
+            color: aliceblue;
+            margin-top: 17px;
+            margin-right: 10px;
+        }
+        #req{
+            width:99%;
+            height:400px;
+        }
+        #i{
+           border: rgb(211, 14, 14);
+        }
+        #p{
+            height:70px;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>
+        <div>
+            <i id="fr"class="fa-solid fa-circle-xmark"onclick="myFun()"></i>
+            <p>Send feedback</p>
+        </div>
+          
+        </div>
+        <div>
+            <i id="fr1"class="fa-solid fa-angles-right" onclick="fun()"></i></div>
+    </div>
+    <form>
+    <textarea id="req" name="w3review" rows="4" cols="50"required>
+        Have Feedback? We'd love to hear it,but please donot share sensitive information.Have question ?Try help or support.
+        </textarea>
+    </form>
+        <hr id="i">
+        <p style="color:red">A description is required</p>
+
+        <label><input type="checkbox">Include screenshot</label>
+        <p id="p">Some <span style="color:blue">account and system information</span> may be sent to Google. We will use it to fix problems and improve our services, subject to our <span style="color:blue">Privacy Policy</span> and <span style="color:blue">Terms of Service</span>. We may email you for more information or updates. Go to Legal Help to ask for content changes for legal reasons.
+        </p>
+
+      
+</body>
+<script>
+    document.getElementById("fr").addEventListener("click",myFun)
+    function myFun(event){
+        event.preventDefault();
+        window.location.href="index.html";
+        
+    }
+    var frAr=JSON.parse(localStorage.getItem("des"))||[]
+   var form= document.querySelector("form").value;
+   form.addEventListener("click",myfun)
+
+   function myfun(event){
+    event.preventDefault();
+    var obj={
+        des:form.req.value,
+    }
+    frAr.push(obj);
+    localStorage.setItem("des",JSON.stringify(frAr))
+   }
+
+ function fun(){
+    window.location.href="feedcomplete.html"
+ }
+
+</script>
+</html>

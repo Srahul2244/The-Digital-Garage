@@ -1,5 +1,5 @@
 let sigAr=JSON.parse(localStorage.getItem("signin"))||[];;
-console.log(sigAr)
+// console.log(sigAr)
 document.querySelector("form").addEventListener("submit",sigFu)
 let logArr=JSON.parse(localStorage.getItem("sigUp"))||[]; 
 function sigFu(event){
