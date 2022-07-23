@@ -13,7 +13,7 @@ body {
     background-color: #FFFFFF;
     position: fixed;
     top: 0;
-
+    
 }
 
 
@@ -34,13 +34,15 @@ body {
 #a {
     margin: 30px;
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
+    color: #174EA6;
 }
 
 #a:hover {
-    background-color: black;
+    background-color: #174EA6;
     color: white;
+   
 }
 
 img {
@@ -86,6 +88,54 @@ img {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+.menu-btn{
+    color:white;
+    display:none;
+}
+#toggle{
+            display: none;
+        }
+        .togglearea{
+            background-color:#f1f1f1;
+            border-bottom:2px solid white;
+            color:white;
+            display:flex;
+            justify-content:start;
+        }
+        .togglearea label{
+            background-color: white;
+            height: 30px;
+            width: 40px;
+            border-radius:6px;
+            cursor:pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .togglearea label .i{
+            background-color: rgb(212, 204, 204);
+            height: 1px;
+            width: 40%;
+            margin:1px 0;
+        }
+        .togglearea{
+            display:none;
+        }
+        .br{
+            text-decoration: none;
+        }
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 .a1 {
     text-decoration: none;
@@ -97,7 +147,7 @@ img {
 }
 
 #btn:hover {
-    background-color: black;
+    background-color:#174EA6;
     color: #FFFFFF;
 }
 
@@ -306,6 +356,29 @@ border: none;
    display: block;
    margin-right: 30px;
 }
+#nav{
+    flex-direction: column;
+    width:30%;
+    display: none; 
+  }
+  #nav1{
+      flex-direction: column;
+   }
+   #a{
+     display:none;
+   }
+   #btn{
+      display: block;
+   }
 
+  #toggle:checked+#nav{
+      display:flex;
+  }
+.togglearea{
+  display: flex;
+}
+.sr{
+  display: inline;
+}
     
 }
